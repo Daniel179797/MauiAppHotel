@@ -6,15 +6,15 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new NovaPasta.ContratacaoHospedagem());
         }
 
-        protected override Window CreateWindow(IActivationState? activationState);
+        protected override Window CreateWindow(IActivationState? activationState)
         {
             var window = base.CreateWindow(activationState);
 
-        Window.width = 400;
-        Window.height = 600;
+        window.Width = 400;
+        window.Height = 600;
 
         return window;
         }
